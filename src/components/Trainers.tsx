@@ -1,7 +1,7 @@
 "use client";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Instagram, Star } from "lucide-react";
+import { Star } from "lucide-react";
 
 const trainers = [
   {

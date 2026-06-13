@@ -1,42 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  --gold: #C9A84C;
-  --gold-light: #E8C96D;
+  --gold: #D4AF37;
+  --gold-bright: #F5D060;
   --dark: #0A0A0A;
-  --dark-card: #111111;
-  --dark-border: #1E1E1E;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: #0A0A0A; color: #fff; overflow-x: hidden; }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: #0A0A0A;
-  color: #ffffff;
-  overflow-x: hidden;
-}
-
-::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: #0A0A0A; }
-::-webkit-scrollbar-thumb { background: #C9A84C; border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: #D4AF37; }
 
-.text-gradient-gold {
-  background: linear-gradient(135deg, #C9A84C, #E8C96D, #C9A84C);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+.text-gold { color: #D4AF37; }
+.bg-gold { background: #D4AF37; }
 
-.glass {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(201, 168, 76, 0.12);
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
+.ticker-track { animation: ticker 25s linear infinite; }
+.ticker-track:hover { animation-play-state: paused; }
